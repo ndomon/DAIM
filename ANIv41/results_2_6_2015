@@ -1,0 +1,32 @@
+Result comparision
+-------------------
+
+OVS Controller performace
+------------------------
+
+*** Iperf: testing TCP bandwidth between h1 and h2
+*** Results: ['24.2 Gbits/sec', '24.2 Gbits/sec']
+
+cookie=0x0, duration=29.082s, table=0, n_packets=4, n_bytes=272, idle_timeout=60,priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=7a:39:74:4b:32:0e,dl_dst=d6:d9:73:1e:8b:6f,nw_src=10.0.0.1,nw_dst=10.0.0.2,nw_tos=16,tp_src=59261,tp_dst=5001 actions=output:2
+ cookie=0x0, duration=29.082s, table=0, n_packets=3, n_bytes=206, idle_timeout=60,priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=d6:d9:73:1e:8b:6f,dl_dst=7a:39:74:4b:32:0e,nw_src=10.0.0.2,nw_dst=10.0.0.1,nw_tos=0,tp_src=5001,tp_dst=59261 actions=output:1
+ cookie=0x0, duration=29.078s, table=0, n_packets=303267, n_bytes=20015654, idle_timeout=60,priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=d6:d9:73:1e:8b:6f,dl_dst=7a:39:74:4b:32:0e,nw_src=10.0.0.2,nw_dst=10.0.0.1,nw_tos=0,tp_src=5001,tp_dst=59262 actions=output:1
+ cookie=0x0, duration=29.078s, table=0, n_packets=346081, n_bytes=15122073658, idle_timeout=60,priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=7a:39:74:4b:32:0e,dl_dst=d6:d9:73:1e:8b:6f,nw_src=10.0.0.1,nw_dst=10.0.0.2,nw_tos=0,tp_src=59262,tp_dst=5001 actions=output:2
+ cookie=0x0, duration=29.082s, table=0, n_packets=1, n_bytes=42, idle_timeout=60,priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=d6:d9:73:1e:8b:6f,dl_dst=7a:39:74:4b:32:0e,nw_src=10.0.0.2,nw_dst=10.0.0.1,arp_op=2 actions=output:1
+
+
+ANI Controller performace
+ANI configuration: TCP flow_mod when TCP ports are set to zero
+--------------------------------------------------------------
+ 
+Intial result with iperf
+*** Iperf: testing TCP bandwidth between h1 and h2
+*** Results: ['339 Kbits/sec', '405 Kbits/sec']
+
+After waiting for a while 
+*** Iperf: testing TCP bandwidth between h1 and h2
+*** Results: ['435 Kbits/sec', '424 Kbits/sec']
+ 
+ 
+ cookie=0x0, duration=9.143s, table=0, n_packets=1, n_bytes=66, idle_timeout=60,priority=65535,tcp,in_port=1,vlan_tci=0x0000,dl_src=1a:86:8a:22:e3:2d,dl_dst=2a:82:40:9e:5f:49,nw_src=10.0.0.1,nw_dst=10.0.0.2,nw_tos=0,tp_src=0,tp_dst=0 actions=output:2
+ cookie=0x0, duration=9.143s, table=0, n_packets=1, n_bytes=66, idle_timeout=60,priority=65535,tcp,in_port=2,vlan_tci=0x0000,dl_src=2a:82:40:9e:5f:49,dl_dst=1a:86:8a:22:e3:2d,nw_src=10.0.0.2,nw_dst=10.0.0.1,nw_tos=0,tp_src=0,tp_dst=0 actions=output:1
+ cookie=0x0, duration=19.252s, table=0, n_packets=1, n_bytes=42, idle_timeout=60,priority=65535,arp,in_port=2,vlan_tci=0x0000,dl_src=2a:82:40:9e:5f:49,dl_dst=1a:86:8a:22:e3:2d,nw_src=10.0.0.2,nw_dst=10.0.0.1,arp_op=0 actions=output:1

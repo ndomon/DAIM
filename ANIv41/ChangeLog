@@ -1,0 +1,56 @@
+ANI version 4
+
+11 July 2015
+
+    - support for command line arguments
+    - support for cbench and normal modes
+    
+12 July 2015
+
+    - make use of OFPP_FLOOD instead of 65531 into the packet out messages
+
+14 July 2015
+
+    - add reconnection mode when switch dies
+    - add version information in command line arguments
+
+25 July 2015
+
+    - improve variable types to support 64 BIT CPU architecture
+    - recognise OpenFlow switches with version > 1
+    - set udp port properly
+    - use register variable to improve performance
+    - subdivide source files into individual sources
+
+26 July 2015
+
+    - initialise all global variables
+    - free hosts and ports tables after switch dies
+
+29 July 2015
+
+    - improve handling of OpenFLow switches version > 1
+    - use atexit function to properly free memories
+    - disable responding to IPv6
+    - do not use flow mod unless host in the table
+
+11 August 2015
+    
+    - definition of link and node struct
+    - definition of ani message
+    - definition of ethernet lldp type
+    - implementation of sending node through lldp
+
+17 August 2015
+
+    - send echo to all switch ports
+    - recieve echo from the switch ports
+
+18 August 2015
+
+    - recieve nodes, building and storing of links into the links table
+    - show links from the table
+
+20 August 2015
+
+    - show links more precisely
