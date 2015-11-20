@@ -8,3 +8,5 @@ By applying the DAIM model and these adaptation algorithms, managing complex sys
 The DAIM model is integrated into the SDN architecture at the level of switches to provide a logically distributed control plane that can manage the flow setups. 
 The proposal moves the computational load to the switches, which allows them to adapt dynamically according to real-time demands and needs. 
 The DAIM model can enhance information objects and network devices to make their local decisions through its active performance, and thus significantly reduce the workload of a centralised SDN/OpenFlow controller. 
+
+Future work will focus on enhancing the storage module
