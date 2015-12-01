@@ -1,0 +1,6 @@
+1. Mac, TCP/UDP IP and port matching in the DIAM 
+2. Discovery of the network, selecting of path, sharing information between DIAM
+3. Updating DIAM table based on network change
+
+** cbench works with -q mode need to put port 6633
+   for testing cbench only (still looping) **
