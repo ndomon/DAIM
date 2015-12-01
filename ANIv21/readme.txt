@@ -1,4 +1,4 @@
-# 'Stable' version of DAIM
+'Stable' version of DAIM
 
 To start the DAIM controller running with Mininet follow these steps:
 
